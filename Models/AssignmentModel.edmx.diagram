@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a94f9f3591c34417817df10f8b7768b3" Name="Diagram1">
+        <EntityTypeShape EntityType="ASSCModel.tblCategory" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASSCModel.tblOrderDetail" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASSCModel.tblOrder" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASSCModel.tblProduct" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASSCModel.tblRole" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASSCModel.tblUser" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ASSCModel.FK__tblPhone__catego__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="ASSCModel.FK__tblOrderD__order__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="ASSCModel.FK__tblOrderD__phone__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="ASSCModel.FK__tblOrders__userI__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="ASSCModel.FK__tblUsers__roleID__33D4B598" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
