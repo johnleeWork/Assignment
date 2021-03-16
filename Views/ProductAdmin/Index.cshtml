@@ -31,37 +31,41 @@
 
 <table class="table">
     <tr>
-           @Html.Raw(ViewBag.Headings)       
+        @Html.Raw(ViewBag.Headings)
     </tr>
+
+    @*<th>
+        @Html.DisplayNameFor(model => model.tbl)
+    </th>*@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Description)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.quantity)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.price)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.status)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.tblCategory.name)
-    </td>
-   
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.phoneID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.phoneID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.phoneID })
-    </td>
-</tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tblCategory.name)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.phoneID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.phoneID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.phoneID })
+            </td>
+        </tr>
     }
 
 </table>
@@ -69,7 +73,7 @@
 <br />
 <div class="row">
     <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-        @using (Html.BeginForm("Index", "Link", FormMethod.Get))
+        @using (Html.BeginForm("Index", "ProductAdmin", FormMethod.Get))
         {
             <p>
                 Size: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
