@@ -44,6 +44,7 @@ namespace Ass.Controllers
                 List<SelectListItem> items = new List<SelectListItem>();
                 items.Add(new SelectListItem { Text = "5", Value = "5" });
                 items.Add(new SelectListItem { Text = "10", Value = "10" });
+                items.Add(new SelectListItem { Text = "15", Value = "15" });
                 items.Add(new SelectListItem { Text = "20", Value = "20" });
                 items.Add(new SelectListItem { Text = "25", Value = "25" });
                 items.Add(new SelectListItem { Text = "50", Value = "50" });
@@ -123,7 +124,7 @@ namespace Ass.Controllers
                 return View(product.ToPagedList(pageNumber, pageSize));
             
         }
-        [HttpPost, HttpParamAction]
+        [HttpGet, HttpParamAction]
         public ActionResult Reset()
         {
             ViewBag.searchValue = "";
